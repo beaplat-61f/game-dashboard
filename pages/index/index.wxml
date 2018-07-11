@@ -1,0 +1,18 @@
+<view>
+  <view class='grid'>
+    <view class='grid-item'>
+      <text class='item-title'>累计用户数</text>
+      <text class='big-number'>239</text>
+    </view>
+    <view class='grid-item'>
+      <text class='item-title'>累计用户数</text>
+      <text class='big-number'>239</text>
+    </view>
+    <view class='grid-item'>
+      <text class='item-title'>累计用户数</text>
+      <text class='big-number'>239</text>
+    </view>
+  </view>
+  <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+  <i-button type="primary" bind:click="updateData">查询</i-button>
+</view>

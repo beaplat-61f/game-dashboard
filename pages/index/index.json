@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "狩游数据可视化",
+  "usingComponents": {
+    "i-button": "../../dist/button/index"
+  }
+}
