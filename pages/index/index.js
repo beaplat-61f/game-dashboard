@@ -3,6 +3,23 @@ var app = getApp();
 var lineChart = null;
 Page({
   data: {
+    currentValue: 'today',
+    ranges: [
+      {
+        title: '昨天',
+        value: 'yesterday'
+      },
+      {
+        title: '今天',
+        value: 'today'
+      },
+      {
+        title: '最近7天',
+        value: 'seven'
+      }
+    ],
+    startDate: '2016-09-01',
+    endDate: '2016-09-02'
   },
   touchHandler: function (e) {
     console.log(lineChart.getCurrentDataIndex(e));
@@ -39,6 +56,30 @@ Page({
       categories: simulationData.categories,
       series: series
     });
+  },
+  startDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      startDate: e.detail.value
+    })
+  },
+  endDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      endDate: e.detail.value
+    })
+  },
+  handleChange: function({ detail }) {
+    console.log(detail)
+    this.setData({
+      currentValue: detail.value
+    })
+  },
+  onShareAppMessage: function() {
+    return {
+      title: '狩游数据可视化',
+      path: 'pages/index/index'
+    }
   },
   onLoad: function (e) {
     var windowWidth = 320;

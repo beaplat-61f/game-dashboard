@@ -3,16 +3,33 @@
     <view class='grid-item'>
       <text class='item-title'>累计用户数</text>
       <text class='big-number'>239</text>
+      <text>日：0.89%</text>
     </view>
     <view class='grid-item'>
-      <text class='item-title'>累计用户数</text>
+      <text class='item-title'>访问人数</text>
       <text class='big-number'>239</text>
     </view>
     <view class='grid-item'>
-      <text class='item-title'>累计用户数</text>
+      <text class='item-title'>新用户数</text>
       <text class='big-number'>239</text>
     </view>
   </view>
+  <ele-select items="{{ ranges }}" currentValue="{{ currentValue }}" bind:change="handleChange"></ele-select>
+  <view class='picker-container'>
+    <picker mode="date" value="{{ startDate }}" start="2015-09-01" end="2017-09-01" bindchange="startDateChange">
+      <view class="picker">
+        {{ startDate }}
+      </view>
+    </picker>
+    到
+    <picker mode="date" value="{{ endDate }}" start="2015-09-01" end="2017-09-01" bindchange="endDateChange">
+      <view class="picker">
+        {{ endDate }}
+      </view>
+    </picker>
+  </view>
   <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
   <i-button type="primary" bind:click="updateData">查询</i-button>
+
+  <!-- <navigator url='/pages/demo/index'>demo</navigator> -->
 </view>

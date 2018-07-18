@@ -1,6 +1,7 @@
 {
-  "navigationBarTitleText": "狩游数据可视化",
+  "navigationBarTitleText": "狩游数据助手",
   "usingComponents": {
+    "ele-select": "../../components/select/index",
     "i-button": "../../dist/button/index"
   }
 }

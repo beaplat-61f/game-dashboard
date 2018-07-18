@@ -30,15 +30,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 1px solid lightgray;
+  border-right: 1rpx solid #e9eaec;
 }
 .grid-item:last-child {
   border-right: none;
 }
 .item-title {
   font-size: 9pt;
-  color: gray;
+  color: #80848f;
 }
 .big-number {
   font-weight: bolder;
+  color: #1c2438;
+  font-size: 17pt;
+}
+.picker-container {
+  display: flex;
+  justify-content: space-around;
 }
