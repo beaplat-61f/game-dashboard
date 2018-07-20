@@ -1,0 +1,11 @@
+<view class='select-container'>
+  <view 
+    wx:for="{{ items }}" 
+    wx:key="{{ index }}" 
+    bindtap='handleSelect' 
+    data-value="{{ item.value }}"
+    class="select-item"
+    style="{{ item.value == currentValue ? 'color: ' + color + '; border: 1px solid ' + color : '' }}">
+    {{ item.title }}
+  </view>
+</view>

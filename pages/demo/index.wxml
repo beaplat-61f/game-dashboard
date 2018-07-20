@@ -1,0 +1,43 @@
+<view>
+  <!-- <custom-test items="{{ group }}" currentValue="{{ currentValue }}" bind:change="handleChange"></custom-test> -->
+  <i-panel title="group-水果">
+    <i-radio-group current="{{current}}" bindchange="handleFruitChange">
+      <i-radio wx:for="{{fruit}}" position="{{position}}" wx:key="{{item.id}}" value="{{item.name}}">
+      </i-radio>
+    </i-radio-group>
+  </i-panel>
+
+  <i-button bindclick="handleClick" type="ghost">切换单选框位置</i-button>
+
+  <i-panel title="radio-动物">
+    <i-radio value="{{animal}}" disabled="{{disabled}}" checked="{{checked}}" bindchange="handleAnimalChange">
+    </i-radio>
+  </i-panel>
+
+  <i-button bindclick="handleDisabled" type="ghost">切换disabled状态</i-button>
+
+  <view class='select-container'>
+    <!-- <view bindtap='handleSelect' data-value="hello" class="{{ 'hello' == currentValue ? 'active': 'fuck' }}">昨天</view>
+    <view bindtap='handleSelect' data-value="2">今天</view>
+    <view bindtap='handleSelect' data-value="3">近7天</view> -->
+    <view wx:for="{{ group }}" wx:key="{{ index }}" bindtap='handleSelect' data-value="{{ item.value }}" class="{{ item.value == currentValue ? 'active': 'normal' }}">{{item.title}}</view>
+    
+  </view>
+  You select the value: {{ currentValue }}
+
+  <!-- <ele-select inner-text="Some text" bindmyevent="onMyEvent">
+    <view>Hello world</view>
+  </ele-select> -->
+  <ele-demo inner-text="What is your name" bind:myevent="onMyEvent">
+    
+    <!-- 这部分内容将被放置在组件 <slot name="before"> 的位置上 -->
+    <view slot="before">这里是插入到组件slot name="before"中的内容</view>
+    <!-- 这部分内容将被放置在组件 <slot name="after"> 的位置上 -->
+    <view slot="after">这里是插入到组件slot name="after"中的内容</view>
+  </ele-demo>
+
+  <!-- <custom-ul>
+    <custom-li> item 1 </custom-li>
+    <custom-li> item 2 </custom-li>
+  </custom-ul> -->
+</view>

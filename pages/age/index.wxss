@@ -1,0 +1,27 @@
+.title {
+	text-align: center;
+	position: relative;
+	margin-top: 20rpx;
+	margin-bottom: 20rpx;
+}
+.back-btn {
+	position: absolute;
+	left: 20rpx;
+	top: 0;
+}
+.picker-container {
+  display: flex;
+  justify-content: space-around;
+}
+.range-container {
+  display: flex;
+  padding: 30rpx;
+  align-items: center;
+}
+.range-text {
+  font-size: 11pt;
+  margin-right: 20rpx;
+}
+.panel-body {
+  padding: 30rpx;
+}

@@ -18,6 +18,7 @@ Page({
         value: 'seven'
       }
     ],
+    showLeft1: false,
     startDate: '2016-09-01',
     endDate: '2016-09-02'
   },
@@ -74,6 +75,11 @@ Page({
     this.setData({
       currentValue: detail.value
     })
+  },
+  toggleLeft: function() {
+    this.setData({
+      showLeft1: !this.data.showLeft1
+    });
   },
   onShareAppMessage: function() {
     return {

@@ -1,0 +1,28 @@
+.select-container {
+  display: flex;
+}
+.normal, .active {
+  padding: 0 20px; 
+  margin-right: 20rpx;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+}
+.active {
+  color: red;
+  border: 1px solid red;
+}
+.normal {
+  color: gray;
+  border: 1px solid gray;
+}
+.select-item {
+  font-size: 9pt;
+  padding: 0 30rpx; 
+  margin-right: 20rpx;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 20px;
+  color: #dddee1;
+  border: 1px solid #dddee1;
+}

@@ -2,13 +2,35 @@
 
 ## 自定义组件说明
 
-> 组件前缀统一为 `ele`，因为我的吉祥物为大象（elephant）
-
 ### select 单选组件
 
 参数说明
 
-待补充
+| 属性         | 说明                    | 类型     | 默认值   |
+| ------------ | ----------------------- | -------- | -------- |
+| items        | select 显示各个项的配置 | Array    |          |
+| color        | item选中高亮颜色        | String   | # 2D8CF0 |
+| currentValue | 当前值                  | String   |          |
+| bind:change  | 选中事件                | Function |          |
+
+items数据格式如下
+
+```
+items: [
+  {
+    title: '昨天',
+    value: 'yesterday'
+  },
+  {
+    title: '今天',
+    value: 'today'
+  },
+  {
+    title: '最近7天',
+    value: 'seven'
+  }
+]
+```
 
 How to use it
 

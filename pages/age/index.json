@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "年龄性别",
+  "usingComponents": {
+    "ele-select": "../../components/select/index",
+    "i-panel": "../../dist/panel/index"
+  }
+}

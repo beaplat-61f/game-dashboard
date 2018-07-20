@@ -1,35 +1,42 @@
-<view>
-  <view class='grid'>
-    <view class='grid-item'>
-      <text class='item-title'>累计用户数</text>
-      <text class='big-number'>239</text>
-      <text>日：0.89%</text>
-    </view>
-    <view class='grid-item'>
-      <text class='item-title'>访问人数</text>
-      <text class='big-number'>239</text>
-    </view>
-    <view class='grid-item'>
-      <text class='item-title'>新用户数</text>
-      <text class='big-number'>239</text>
-    </view>
+<view class="page-container">
+  <view class=''>
+    <i-icon type="keyboard" size="28" color="#2D8CF0" bindtap="toggleLeft" />
   </view>
-  <ele-select items="{{ ranges }}" currentValue="{{ currentValue }}" bind:change="handleChange"></ele-select>
-  <view class='picker-container'>
-    <picker mode="date" value="{{ startDate }}" start="2015-09-01" end="2017-09-01" bindchange="startDateChange">
-      <view class="picker">
-        {{ startDate }}
+  <i-drawer mode="left" visible="{{showLeft1}}" bind:close="toggleLeft">
+    <view class="drawer-container">
+      <view>
+        <image src='/images/logo.png' class='logo' />
       </view>
-    </picker>
-    到
-    <picker mode="date" value="{{ endDate }}" start="2015-09-01" end="2017-09-01" bindchange="endDateChange">
-      <view class="picker">
-        {{ endDate }}
+      <i-cell-group>
+        <i-cell title="用户趋势" is-link url="/pages/age/index"></i-cell>
+        <i-cell title="用户趋势" is-link url="/pages/age/index"></i-cell>
+        <i-cell title="用户趋势" is-link url="/pages/age/index"></i-cell>
+        <i-cell title="用户趋势" is-link url="/pages/age/index"></i-cell>
+      </i-cell-group>
+    </view>
+  </i-drawer>
+  <i-panel title="昨日概况">
+    <view class="panel-body">
+      <view class='grid'>
+        <view class='grid-item'>
+          <text class='item-title'>累计用户数</text>
+          <text class='big-number'>239</text>
+        </view>
+        <view class='grid-item'>
+          <text class='item-title'>访问人数</text>
+          <text class='big-number'>239</text>
+        </view>
+        <view class='grid-item'>
+          <text class='item-title'>新用户数</text>
+          <text class='big-number'>239</text>
+        </view>
       </view>
-    </picker>
-  </view>
-  <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+    </view>
+  </i-panel>
+  <i-panel title="今日趋势">
+    <view class="panel-body">
+      <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+    </view>
+  </i-panel>
   <i-button type="primary" bind:click="updateData">查询</i-button>
-
-  <!-- <navigator url='/pages/demo/index'>demo</navigator> -->
 </view>

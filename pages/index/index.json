@@ -2,6 +2,11 @@
   "navigationBarTitleText": "狩游数据助手",
   "usingComponents": {
     "ele-select": "../../components/select/index",
+    "i-icon": "../../dist/icon/index",
+    "i-panel": "../../dist/panel/index",
+    "i-drawer": "../../dist/drawer/index",
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
     "i-button": "../../dist/button/index"
   }
 }

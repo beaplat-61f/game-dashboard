@@ -1,0 +1,32 @@
+<view class="">
+  <view class="range-container">
+    <view class='range-text'>日期范围</view>
+    <ele-select items="{{ ranges }}" currentValue="{{ currentValue }}" bind:change="handleChange"></ele-select>
+  </view>
+
+  <view class='picker-container'>
+    <picker mode="date" value="{{ startDate }}" start="2015-09-01" end="2017-09-01" bindchange="startDateChange">
+      <view class="picker">
+        {{ startDate }}
+      </view>
+    </picker>
+    到
+    <picker mode="date" value="{{ endDate }}" start="2015-09-01" end="2017-09-01" bindchange="endDateChange">
+      <view class="picker">
+        {{ endDate }}
+      </view>
+    </picker>
+  </view>
+  <i-panel title="活跃用户">
+    <view style="padding: 15px;">
+      <view class="title">
+        <view wx:if="{{!isMainChartDisplay}}" class="back-btn" bindtap="backToMainChart">返回</view>
+        {{chartTitle}}
+      </view>
+      <!-- 柱状图 -->
+      <canvas canvas-id="columnCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
+      <!-- 饼图 -->
+      <canvas canvas-id="pieCanvas" class="canvas" style="height:300px" bindtouchstart="touchPieHandler"></canvas>
+    </view>
+  </i-panel>
+</view>

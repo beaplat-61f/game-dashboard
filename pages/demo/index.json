@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "demo",
+  "usingComponents": {
+    "ele-select": "../../components/select/index",
+    "ele-demo": "../../components/demo/index",
+    "i-radio-group": "../../dist/radio-group/index",
+    "i-radio": "../../dist/radio/index",
+    "i-button": "../../dist/button/index"
+  }
+}
